@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="8" fill="#1a1a1a"/>
+  <!-- Daisy petals: 10 petals radiating from center -->
+  <g transform="translate(16,16)">
+    <!-- petal 0deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(0)"/>
+    <!-- petal 36deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(36)"/>
+    <!-- petal 72deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(72)"/>
+    <!-- petal 108deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(108)"/>
+    <!-- petal 144deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(144)"/>
+    <!-- petal 180deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(180)"/>
+    <!-- petal 216deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(216)"/>
+    <!-- petal 252deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(252)"/>
+    <!-- petal 288deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(288)"/>
+    <!-- petal 324deg -->
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4.5" fill="white" transform="rotate(324)"/>
+    <!-- center circle -->
+    <circle cx="0" cy="0" r="3" fill="white"/>
+  </g>
+</svg>
