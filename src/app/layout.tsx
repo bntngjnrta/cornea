@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LanguageProvider } from "@/context/language-context";
-import { HeroHeader } from "@/components/header";
-import WhatsAppButton from "@/components/whatsapp-button";
+import { HeroHeader } from "@/components/layout/header";
+import WhatsAppButton from "@/components/layout/whatsapp-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cornea Studio",
-  description: "We transform ideas into impactful digital experiences through thoughtful design and modern technology.",
+  title: "Cornea Studio - Seeing Beyond, Building Forward",
+  description:
+    "At Cornea Studio, we transform ideas into impactful digital experiences through thoughtful design and modern technology.",
 };
 
 export default function RootLayout({

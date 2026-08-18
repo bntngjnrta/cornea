@@ -1,6 +1,7 @@
 "use client";
+
 import { useRef, useState } from "react";
-import { Cursor } from "@/components/motion-primitives/cursor";
+import { Cursor } from "@/components/motion/cursor";
 import { AnimatePresence, motion } from "motion/react";
 
 export function CustomCursorElement({

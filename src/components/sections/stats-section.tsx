@@ -1,5 +1,6 @@
 "use client";
-import { ScrollView } from "@/components/scroll-view";
+
+import { ScrollView } from "@/components/motion/scroll-view";
 import { motion } from "motion/react";
 import { useT } from "@/i18n";
 

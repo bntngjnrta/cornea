@@ -101,7 +101,7 @@ const addDefaultVariants = (variants: Variants) => ({
   visible: { ...defaultItemVariants.visible, ...variants.visible },
 });
 
-function AnimatedGroup({
+export function AnimatedGroup({
   children,
   className,
   variants,
@@ -115,14 +115,19 @@ function AnimatedGroup({
   };
   const containerVariants = variants?.container || selectedVariants.container;
   const itemVariants = variants?.item || selectedVariants.item;
+
   const MotionComponent = React.useMemo(
-    //@ts-expect-error type
-    () => motion.create(as as keyof JSX.IntrinsicElements),
+    () =>
+      typeof as === "string" && as in motion
+        ? (motion as unknown as Record<string, React.ComponentType<any>>)[as]
+        : motion.create(as as any),
     [as]
   );
   const MotionChild = React.useMemo(
-    //@ts-expect-error type
-    () => motion.create(asChild as keyof JSX.IntrinsicElements),
+    () =>
+      typeof asChild === "string" && asChild in motion
+        ? (motion as unknown as Record<string, React.ComponentType<any>>)[asChild]
+        : motion.create(asChild as any),
     [asChild]
   );
 
@@ -131,7 +136,6 @@ function AnimatedGroup({
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      //@ts-expect-error type
       className={className}
     >
       {React.Children.map(children, (child, index) => (
@@ -142,5 +146,3 @@ function AnimatedGroup({
     </MotionComponent>
   );
 }
-
-export { AnimatedGroup };

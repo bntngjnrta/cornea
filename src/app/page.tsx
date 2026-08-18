@@ -1,24 +1,21 @@
-import AboutUsSection from "@/components/sections/home/about-section";
-import FullVersionSection from "@/components/sections/home/full-version-section";
-import HeroSection from "@/components/sections/home/hero-section";
-import PortfolioSection from "@/components/sections/home/portfolio-section";
-import ServicesSection from "@/components/sections/home/services";
-import ServicesSection2 from "@/components/sections/home/services-2";
-import StatsSection from "@/components/sections/home/stats";
-import Testimonials from "@/components/testimonials";
-import FooterSection from "@/components/footer";
-import ContactSection from "@/components/contact";
+import HeroSection from "@/components/sections/hero-section";
+import AboutSection from "@/components/sections/about-section";
+import ServicesSection from "@/components/sections/services-section";
+import PortfolioSection from "@/components/sections/portfolio-section";
+import StatsSection from "@/components/sections/stats-section";
+import TestimonialsSection from "@/components/sections/testimonials-section";
+import ContactSection from "@/components/sections/contact-section";
+import FooterSection from "@/components/layout/footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <AboutUsSection />
-      {/* <ServicesSection /> */}
-      <ServicesSection2 />
+      <AboutSection />
+      <ServicesSection />
       <PortfolioSection />
       <StatsSection />
-      <Testimonials />
+      <TestimonialsSection />
       <ContactSection />
       <FooterSection />
     </main>

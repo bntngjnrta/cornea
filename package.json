@@ -1,16 +1,25 @@
 {
   "name": "cornea-studio",
-  "version": "0.1.0",
-  "description": "A Design agency template built with Next.js.",
+  "version": "1.0.0",
+  "description": "Modern Digital Design & Development Studio portfolio website built with Next.js 15, TypeScript, Tailwind CSS v4, Motion, and Shadcn UI.",
   "keywords": [
-    "cornea studio"
+    "nextjs",
+    "nextjs15",
+    "react19",
+    "typescript",
+    "tailwindcss",
+    "framer-motion",
+    "motion-dev",
+    "shadcn-ui",
+    "portfolio",
+    "agency-website",
+    "digital-studio",
+    "i18n",
+    "dark-mode",
+    "cornea-studio"
   ],
   "author": "Cornea Studio",
   "license": "MIT",
-  "repository": {
-    "type": "",
-    "url": ""
-  },
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

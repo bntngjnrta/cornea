@@ -1,10 +1,11 @@
 "use client";
+
 import { Circle } from "lucide-react";
-import { ScrollView } from "./scroll-view";
+import { ScrollView } from "@/components/motion/scroll-view";
 import Image from "next/image";
 import { useT } from "@/i18n";
 
-export default function ContentSection() {
+export default function AboutSection() {
   const t = useT();
 
   return (
@@ -22,11 +23,11 @@ export default function ContentSection() {
         </div>
         <ScrollView>
           <Image
-            className="rounded-(--radius) grayscale-75 object-cover aspect-[16/9] w-full"
+            className="rounded-2xl grayscale-75 object-cover aspect-[16/9] w-full"
             src="/images/office.jpeg"
-            alt="team image"
-            height="480"
-            width="720"
+            alt="Cornea Studio Office"
+            height={480}
+            width={720}
             loading="lazy"
           />
         </ScrollView>
@@ -35,7 +36,7 @@ export default function ContentSection() {
             {t.about.principles.map((principle, index) => (
               <div className="space-y-3" key={index}>
                 <div className="flex items-center gap-2">
-                  <Circle className="size-4" />
+                  <Circle className="size-4 shrink-0 text-primary" />
                   <h3 className="text-sm font-medium">{principle.title}</h3>
                 </div>
                 <p className="text-muted-foreground text-sm">

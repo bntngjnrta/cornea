@@ -1,5 +1,6 @@
 "use client";
-import PortfolioCard from "@/components/portfolio-card";
+
+import PortfolioCard from "@/components/sections/portfolio-card";
 import { PORTFOLIO_CONTENT } from "@/content/portfolio";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";

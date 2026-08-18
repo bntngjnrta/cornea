@@ -1,7 +1,8 @@
 "use client";
+
 import { Logo } from "@/components/logo";
 import Link from "next/link";
-import { ScrollView } from "./scroll-view";
+import { ScrollView } from "@/components/motion/scroll-view";
 import { useT } from "@/i18n";
 
 export default function FooterSection() {

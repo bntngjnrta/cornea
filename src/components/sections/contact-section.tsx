@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { ScrollView } from "./scroll-view";
+import { ScrollView } from "@/components/motion/scroll-view";
 import React, { useState } from "react";
 import { useT } from "@/i18n";
 
@@ -65,15 +65,15 @@ export default function ContactSection() {
             <ScrollView delay={0.2}>
               <ul className="mt-8 divide-y border-y *:flex *:items-center *:gap-3 *:py-3">
                 <li>
-                  <Mail className="size-5 mr-2 inline shrink-0" />
+                  <Mail className="size-5 mr-2 inline shrink-0 text-primary" />
                   <span>corneastd@gmail.com</span>
                 </li>
                 <li>
-                  <PhoneCall className="size-5 mr-2 inline shrink-0" />
+                  <PhoneCall className="size-5 mr-2 inline shrink-0 text-primary" />
                   <span>+62 823-4196-4708</span>
                 </li>
                 <li>
-                  <MapPin className="size-5 mr-2 inline shrink-0" />
+                  <MapPin className="size-5 mr-2 inline shrink-0 text-primary" />
                   <span>Cikarang, Jawa Barat</span>
                 </li>
               </ul>
@@ -91,7 +91,7 @@ export default function ContactSection() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="mt-2"
+                      className="mt-2 cursor-pointer"
                       onClick={() => setStatus("idle")}
                     >
                       {t.contact.sendAnotherBtn}
@@ -150,7 +150,7 @@ export default function ContactSection() {
                       )}
 
                       <div>
-                        <Button type="submit" className="w-full" disabled={status === "loading"}>
+                        <Button type="submit" className="w-full cursor-pointer" disabled={status === "loading"}>
                           {status === "loading" ? (
                             <>
                               <Loader2 className="mr-2 size-4 animate-spin" />

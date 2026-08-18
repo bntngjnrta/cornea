@@ -1,5 +1,6 @@
 "use client";
-import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
+
+import { InfiniteSlider } from "@/components/motion/infinite-slider";
 import { useT } from "@/i18n";
 import Image from "next/image";
 

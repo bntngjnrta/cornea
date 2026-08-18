@@ -2,8 +2,7 @@
 
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import { SlidingNumber } from "@/components/motion-primitives/sliding-number";
-import { InView } from "./motion-primitives/in-view";
+import { SlidingNumber } from "@/components/motion/sliding-number";
 
 export function NumberEffect({
   numberFrom = 0,
@@ -24,7 +23,7 @@ export function NumberEffect({
     if (value === numberTo) return;
 
     const interval = setInterval(() => {
-      setValue(value + numberSteps);
+      setValue((prev) => (prev + numberSteps > numberTo ? numberTo : prev + numberSteps));
     }, 10);
     return () => clearInterval(interval);
   }, [value, numberTo, numberSteps]);
@@ -38,7 +37,7 @@ export function NumberEffect({
         duration: duration,
         delay: delay,
       }}
-      className=" inline"
+      className="inline"
     >
       <div className="inline-flex items-center gap-1">
         <SlidingNumber value={value} />

@@ -1,7 +1,7 @@
 "use client";
 
 import { UseInViewOptions, motion } from "motion/react";
-import { InView } from "./motion-primitives/in-view";
+import { InView } from "./in-view";
 
 export function ScrollView({
   children,

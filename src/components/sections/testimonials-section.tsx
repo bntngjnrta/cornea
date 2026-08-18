@@ -1,10 +1,11 @@
 "use client";
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { ScrollView } from "./scroll-view";
+import { ScrollView } from "@/components/motion/scroll-view";
 import { useT } from "@/i18n";
 
-export default function Testimonials() {
+export default function TestimonialsSection() {
   const t = useT();
   const [first, second, third, fourth] = t.testimonials.items;
 
@@ -37,7 +38,7 @@ export default function Testimonials() {
                       <AvatarFallback>{first.initials}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <cite className="text-sm font-medium">{first.name}</cite>
+                      <cite className="text-sm font-medium not-italic">{first.name}</cite>
                       <span className="text-muted-foreground block text-sm">{first.role}</span>
                     </div>
                   </div>
@@ -55,7 +56,7 @@ export default function Testimonials() {
                       <AvatarFallback>{second.initials}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <cite className="text-sm font-medium">{second.name}</cite>
+                      <cite className="text-sm font-medium not-italic">{second.name}</cite>
                       <span className="text-muted-foreground block text-sm">{second.role}</span>
                     </div>
                   </div>
@@ -73,7 +74,7 @@ export default function Testimonials() {
                       <AvatarFallback>{third.initials}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <cite className="text-sm font-medium">{third.name}</cite>
+                      <cite className="text-sm font-medium not-italic">{third.name}</cite>
                       <span className="text-muted-foreground block text-sm">{third.role}</span>
                     </div>
                   </div>
@@ -82,7 +83,7 @@ export default function Testimonials() {
             </Card>
 
             {/* Small card 2 */}
-            <Card className="card variant-mixed">
+            <Card>
               <CardContent className="h-full pt-6">
                 <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
                   <p>{fourth.quote}</p>
@@ -91,7 +92,7 @@ export default function Testimonials() {
                       <AvatarFallback>{fourth.initials}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="text-sm font-medium">{fourth.name}</p>
+                      <cite className="text-sm font-medium not-italic">{fourth.name}</cite>
                       <span className="text-muted-foreground block text-sm">{fourth.role}</span>
                     </div>
                   </div>

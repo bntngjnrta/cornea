@@ -1,7 +1,8 @@
 "use client";
-import { CustomCursorElement } from "@/components/custom-cursor-element";
-import { InView } from "@/components/motion-primitives/in-view";
-import { ScrollView, ScrollViewStaggerWrapper } from "@/components/scroll-view";
+
+import { CustomCursorElement } from "@/components/motion/custom-cursor";
+import { InView } from "@/components/motion/in-view";
+import { ScrollView, ScrollViewStaggerWrapper } from "@/components/motion/scroll-view";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +15,7 @@ const serviceImages = [
   { img: "/images/abstract-5.png", url: "#" },
 ];
 
-export default function ServicesSection2() {
+export default function ServicesSection() {
   const t = useT();
 
   return (
@@ -85,8 +86,8 @@ export default function ServicesSection2() {
                           <Image
                             src={serviceImages[index]?.img ?? "/images/abstract-1.png"}
                             alt={service.name}
-                            height="480"
-                            width="720"
+                            height={480}
+                            width={720}
                             loading="lazy"
                             className="object-cover object-top transition-all duration-500 w-full aspect-[16/9]"
                           />
